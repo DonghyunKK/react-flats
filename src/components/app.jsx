@@ -13,7 +13,11 @@ class App extends Component {
       selectedFlat: flats[0],
       flats
     };
-    console.log(this.state.flats[0].name);
+    // console.log(this.state.flats[0].name);
+  }
+
+  selectFlat = (index) => {
+    this.setState({ selectedFlat: flats[index] });
   }
 
   center() {
@@ -21,10 +25,6 @@ class App extends Component {
       lat: this.state.selectedFlat.lat,
       lng: this.state.selectedFlat.lng
     };
-  }
-
-  selectFlat = (index) => {
-    this.setState({ selectedFlat: flats[index] });
   }
 
   render () {
